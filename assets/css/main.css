@@ -1,12 +1,6 @@
 @import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic|Source+Code+Pro:400");
 
-/*
-	Read Only by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
 html,
 body,
 div,
@@ -212,7 +206,7 @@ a {
 
 a:hover {
   border-bottom-color: transparent;
-  color: #4acaa8 !important;
+  color:  rgba(14, 75, 187, 0.767) !important;
 }
 
 strong,
@@ -1879,7 +1873,7 @@ header h6 + p {
 }
 
 header.major h2 {
-  color: #4acaa8;
+  color:  rgba(14, 75, 187, 0.767);
   font-size: 3.5em;
 }
 
@@ -1942,7 +1936,7 @@ input[type="password"]:focus,
 input[type="email"]:focus,
 select:focus,
 textarea:focus {
-  border-color: #4acaa8;
+  border-color:  rgba(14, 75, 187, 0.767);
 }
 
 select {
@@ -2047,7 +2041,7 @@ input[type="radio"]:checked + label:before {
 
 input[type="checkbox"]:focus + label:before,
 input[type="radio"]:focus + label:before {
-  border-color: #4acaa8;
+  border-color:  rgba(14, 75, 187, 0.767);
 }
 
 input[type="checkbox"] + label:before {
@@ -2494,7 +2488,7 @@ ul.feature-icons li:before {
 }
 
 ul.feature-icons li:before {
-  background: #4acaa8;
+  background: #fff;
   border-radius: 100%;
   color: #ffffff;
   display: block;
@@ -2710,7 +2704,7 @@ input[type="submit"].primary,
 input[type="reset"].primary,
 input[type="button"].primary,
 .button.primary {
-  background-color: #4acaa8;
+  background-color: #bcbddf;
   color: #ffffff !important;
 }
 
@@ -2718,7 +2712,7 @@ input[type="submit"].primary:hover,
 input[type="reset"].primary:hover,
 input[type="button"].primary:hover,
 .button.primary:hover {
-  background-color: #5ed0b1;
+  background-color:  rgba(14, 75, 187, 0.767);
 }
 
 input[type="submit"].primary:active,
@@ -2793,7 +2787,7 @@ input[type="button"]:disabled,
   -webkit-justify-content: space-between;
   -ms-justify-content: space-between;
   justify-content: space-between;
-  background: #4acaa8;
+  background: rgba(14, 75, 187, 0.767);
   color: #d2f2e9;
   height: 100%;
   overflow-y: auto;
@@ -2892,7 +2886,7 @@ input[type="button"]:disabled,
 }
 
 #header > nav ul li {
-  border-top: solid 2px #5ccfb1;
+  border-top: solid 2px  rgba(14, 75, 187, 0.767); 
   display: block;
   padding: 0;
 }
@@ -2911,7 +2905,7 @@ input[type="button"]:disabled,
 
 #header > nav ul li a.active {
   background: #fff;
-  color: #4acaa8 !important;
+  color:  rgba(14, 75, 187, 0.767) !important;
 }
 
 #header > nav ul li:first-child {
@@ -3186,7 +3180,7 @@ input[type="button"]:disabled,
   }
 
   #titleBar .toggle:before {
-    background: #4acaa8;
+    background: rgba(14, 75, 187, 0.767) ;
     color: #ffffff;
     content: "\f0c9";
     display: block;
@@ -3508,12 +3502,60 @@ input[type="button"]:disabled,
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
-	.container50 {
+  .container50 {
     grid-template-columns: 1fr);
   }
-  }
+}
 
 #linkin:link {
   font-size: 30px;
   text-decoration: none;
+}
+
+#sanbi {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-image: url("https://i.imgur.com/dIJA1LX.jpg");
+}
+
+.mybutton {
+  padding: 16px 42px;
+  box-shadow: 0px 0px 12px -2px rgba(0,0,0,0.5);
+  line-height: 1.25;
+  background:  rgba(14, 75, 187, 0.438);
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  position: relative;
+  transition: background-color .6s ease;
+  overflow: hidden;
+  &:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    transform-style: flat;
+    transform: translate3d(-50%,-50%,0);
+    background: rgba(white,.1);
+    border-radius: 100%;
+    transition: width .3s ease, height .3s ease;
+  }
+  &:focus,
+  &:hover {
+      background: darken(#FC6E51,7%);
+  }
+  &:active {
+    &:after {
+      width: 200px;
+      height: 200px;
+    }
+  }
 }
